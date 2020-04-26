@@ -1,0 +1,29 @@
+{
+
+"interface":"127.0.0.1",
+"port":5000,
+"commands":[
+    {
+        "name":"testprog",
+        "exec":["/usr/bin/sleep","5"],
+        "repo":"test",
+        "workingdir":"/tmp"
+    },
+    {
+        "name":"testprog2",
+        "exec":["/usr/bin/stress","-c","3","-t","5"],
+        "repo":"test",
+        "workingdir":"/tmp"
+    }
+
+],
+"repositories":[
+    {
+        "name":"test",
+        "gitlaburl":"https://test",
+        "gitlabtoken":"secret",
+        "ref":"refs/heads/master"
+    }
+]
+
+}
